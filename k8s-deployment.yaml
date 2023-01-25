@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: time-off-app
-        image: us-central1-docker.pkg.dev/gorilla-375616/time-off-gorilla/time-off-image:latest
+        image: gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest
         ports:
           - containerPort: 3000
