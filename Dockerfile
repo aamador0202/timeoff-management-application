@@ -20,8 +20,9 @@ RUN apk add --no-cache \
     nodejs npm 
 
 COPY package*.json  ./
-RUN apk add --update python2 make g++
-RUN npm install
+#RUN apk add --update python3 make g++
+RUN apt-get -y install python2.7
+RUN npm install 
 
 FROM alpine:latest
 
