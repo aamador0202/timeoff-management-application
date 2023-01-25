@@ -35,6 +35,7 @@ RUN adduser --system app --home /app
 USER app
 WORKDIR /app
 COPY . /app
+COPY . .
 COPY --from=dependencies node_modules ./node_modules
 
 CMD npm start
