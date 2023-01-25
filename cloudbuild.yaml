@@ -1,7 +1,4 @@
 steps:
-- name: python
-  entrypoint: python
-  args: ["-m", "pip", "install", "--upgrade", "python3"]
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'us-central1-docker.pkg.dev/gorilla-375616/time-off-gorilla/time-off-image:latest', '.' ]
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
