@@ -35,7 +35,7 @@ RUN adduser --system app --home /app
 USER app
 WORKDIR /app
 COPY . /app
-COPY --from=dependencies /app/node_modules ./node_modules
+COPY --from=dependencies /app/node_modules/ ./node_modules
 
 CMD npm start
 EXPOSE 3000
