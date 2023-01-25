@@ -15,7 +15,7 @@
 #	docker exec -ti --user root alpine_timeoff /bin/sh
 # --------------------------------------------------------------------
 FROM alpine:latest as dependencies
-FROM python:2.7
+
 
 RUN apk add --no-cache \
     nodejs npm 
@@ -23,6 +23,7 @@ RUN apk add --no-cache \
 COPY package*.json  ./
 #RUN apk add --update python3 make g++
 #RUN apt-get -y install python2.7
+FROM python:2.7
 RUN npm install 
 
 FROM alpine:latest
