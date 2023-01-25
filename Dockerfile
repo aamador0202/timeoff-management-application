@@ -19,7 +19,7 @@ FROM alpine:latest as dependencies
 RUN apk add --no-cache \
     nodejs npm 
 
-COPY package.json  .
+COPY package*.json  .
 RUN npm install -g npm
 
 FROM alpine:latest
@@ -35,7 +35,6 @@ RUN adduser --system app --home /app
 USER app
 WORKDIR /app
 COPY . /app
-COPY . .
 COPY --from=dependencies node_modules ./node_modules
 
 CMD npm start
