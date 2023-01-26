@@ -11,6 +11,4 @@ steps:
     --region=us-central1
     --source=./
     --images=image1=gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest    
-images: ['gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest']      
-
-
+images: ['gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest']
